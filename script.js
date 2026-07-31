@@ -8,12 +8,25 @@ const projects = [
     tech: ["React 19", "TypeScript", "Firebase", "MUI", "TanStack Query", "Leaflet", "Recharts", "Vite"],
     link: "",
     links: [
-      { label: "Landing", url: "https://beemore.com.ar/" },
       { label: "Dashboard", url: "https://beemore.com.ar/login" }
     ],
     impact: "Sistema en producción para Beemore, apícola argentina, con cobertura de gestión técnica y administrativa.",
     challenges: "Sincronización offline-first en zonas rurales sin conectividad estable, y modelado de datos apícolas con semáforo sanitario y esquema de relevamientos complejo.",
     solution: "Firebase con persistencia local, optimistic updates con TanStack Query, y arquitectura de features modular con tipos estrictos en TypeScript."
+  },
+  {
+    title: "Beemore Landing",
+    description: "Sitio institucional multilingüe para Beemore, consultora apícola. Astro + i18n.",
+    details: "Landing page en producción para Beemore con i18n completo (es/en/it), secciones de servicios y asesoramiento técnico, feed de Instagram integrado, formulario de contacto y showcase del dashboard Appi.AR. SEO, GEO y Core Web Vitals optimizados.",
+    images: ["img/beemore_landing.png"],
+    tech: ["Astro", "TypeScript", "i18n", "CSS", "SEO"],
+    link: "",
+    links: [
+      { label: "Landing", url: "https://beemore.com.ar/" }
+    ],
+    impact: "Sitio en producción en beemore.com.ar con presencia internacional (ES/EN/IT).",
+    challenges: "Routing multi-locale con prefijo por idioma, SEO multi-región y rendimiento estático sin dependencias de runtime.",
+    solution: "Astro con output estático, i18n routing con prefijo de locale y optimización de assets para Core Web Vitals."
   },
   {
     title: "BlackFire E-Commerce",
