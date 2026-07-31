@@ -7,6 +7,10 @@ const projects = [
     images: ["img/beemore_frontend_demo.mp4"],
     tech: ["React 19", "TypeScript", "Firebase", "MUI", "TanStack Query", "Leaflet", "Recharts", "Vite"],
     link: "",
+    links: [
+      { label: "Landing", url: "https://beemore.com.ar/" },
+      { label: "Dashboard", url: "https://beemore.com.ar/login" }
+    ],
     impact: "Sistema en producción para Beemore, apícola argentina, con cobertura de gestión técnica y administrativa.",
     challenges: "Sincronización offline-first en zonas rurales sin conectividad estable, y modelado de datos apícolas con semáforo sanitario y esquema de relevamientos complejo.",
     solution: "Firebase con persistencia local, optimistic updates con TanStack Query, y arquitectura de features modular con tipos estrictos en TypeScript."
@@ -238,9 +242,11 @@ function renderProjects() {
                     <button class="btn-action btn-primary view-details-btn" data-index="${index}">
                         View Details
                     </button>
-                    ${project.link 
-                        ? `<a href="${project.link}" target="_blank" class="btn-action btn-secondary">Repo <span style="font-size: 0.7em">↗</span></a>` 
-                        : `<button class="btn-action btn-secondary" disabled style="opacity:0.5; cursor:not-allowed;">Private</button>`
+                    ${project.links 
+                        ? project.links.map(l => `<a href="${l.url}" target="_blank" class="btn-action btn-secondary">${l.label} <span style="font-size: 0.7em">↗</span></a>`).join('')
+                        : project.link 
+                            ? `<a href="${project.link}" target="_blank" class="btn-action btn-secondary">Repo <span style="font-size: 0.7em">↗</span></a>` 
+                            : `<button class="btn-action btn-secondary" disabled style="opacity:0.5; cursor:not-allowed;">Private</button>`
                     }
                 </div>
             </div>
