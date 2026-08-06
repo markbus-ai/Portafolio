@@ -30,14 +30,14 @@ const projects = [
   },
   {
     title: "BlackFire E-Commerce",
-    description: "Plataforma e-commerce completa con backend en Django y frontend moderno en React.",
-    details: "Sistema comercial integral con gestión de cuentas de usuario, carrito de compras persistente, procesamiento de pedidos, catálogo jerárquico de categorías y productos, y panel de administración dinámico. Empaquetado y orquestado completamente con Docker y Docker Compose.",
+    description: "Plataforma e-commerce completa con backend en FastAPI, pagos con Mercado Pago y frontend en React.",
+    details: "Sistema comercial integral con gestión de cuentas de usuario, carrito de compras persistente, procesamiento de pedidos, catálogo jerárquico de categorías y productos, y panel de administración dinámico. Pagos en línea con Mercado Pago mediante preferencias de pago y webhooks de confirmación, con manejo de doble cuenta para mayoristas. Empaquetado y orquestado completamente con Docker y Docker Compose.",
     images: ["img/blackfire.jpg"],
-    tech: ["Python", "Django", "React", "Docker", "PostgreSQL"],
+    tech: ["Python", "FastAPI", "React", "Mercado Pago", "Docker", "PostgreSQL"],
     link: "https://blackfire.com.ar/",
-    impact: "Sitio web de e-commerce en producción con diseño y experiencia de usuario optimizados para conversión.",
-    challenges: "Sincronización de estados del carrito entre React y la API de Django, y orquestación del entorno de desarrollo y producción mediante contenedores.",
-    solution: "Endpoints REST robustos con autenticación JWT, contenedores Docker optimizados para backend/frontend y comunicación por sockets locales."
+    impact: "Sitio web de e-commerce en producción con diseño y experiencia de usuario optimizados para conversión y pagos en línea integrados.",
+    challenges: "Sincronización de estados del carrito entre React y la API de FastAPI, integración de pagos de Mercado Pago con webhooks, y orquestación del entorno de desarrollo y producción mediante contenedores.",
+    solution: "Endpoints REST robustos con autenticación JWT, integración de Mercado Pago con preferencias de pago y webhooks de confirmación, contenedores Docker optimizados para backend/frontend y comunicación por sockets locales."
   },
   {
     title: "MozoPlus",
